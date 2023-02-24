@@ -1,7 +1,15 @@
-<%= simple_form_for(@list) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit %>
-<% end %>
-
-
-<p><%= link_to "Back to HomePage", lists_path %></p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.alphacoders.com/441/441125.jpg);">
+  <div class="container">
+    <h1>Create a New list</strong> !</h1>
+  </div>
+</div>
+<div class="bg-warning bg-gradient">
+  <div class="container py-5 ">
+    <%= simple_form_for(@list) do |f| %>
+      <%= f.input :name %>
+      <%= f.submit %>
+    <% end %>
+    <br>
+    <p><%= link_to "Back to HomePage", lists_path %></p>
+  </div>
+</div>

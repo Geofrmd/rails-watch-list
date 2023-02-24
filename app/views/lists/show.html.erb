@@ -3,9 +3,9 @@
 <p><%=bookmark.comment %></p>
 <p><%= bookmark.movie.title %></p>
 <p><%= bookmark.movie.overview %></p>
+<p><%= link_to "delete ", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this movie?" } %></p>
 </div>
 <% end %>
-
+<p><%= link_to "delete ", list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %></p>
 <p><%= link_to "Add a Bookmark", new_list_bookmark_path(@list) %></p>
 <p><%= link_to "Back to HomePage", lists_path %></p>
-<p><%= link_to "delete this list", list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %></p>
